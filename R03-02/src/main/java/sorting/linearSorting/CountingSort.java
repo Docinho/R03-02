@@ -14,8 +14,7 @@ public class CountingSort extends AbstractSorting<Integer> {
 
 	public static void main(String[] args) {
 		CountingSort tst = new CountingSort();
-		Integer[] array = { 30, 28, 7, 29, 11, 26, 4, 22, 23,
-				31 };
+		Integer[] array = { 4, 9, 3, 4, 0, 5, 1, 4 };
 		tst.sort(array, 0, array.length - 1);
 
 	}
@@ -40,8 +39,8 @@ public class CountingSort extends AbstractSorting<Integer> {
 			int atual = 0;
 			System.out.println(atual);
 			for (int i = rightIndex; i >= leftIndex; i--) {
-				arrayFinal[aux[array[i] - 1]] = array[i];
-				aux[array[i] -1] = aux[array[i] - 1] - 1;
+				arrayFinal[aux[array[i]]-1] = array[i];
+				aux[array[i]] = aux[array[i]] - 1;
 			}
 			for (int i = leftIndex; i <= rightIndex; i++) {
 				array[i] = arrayFinal[i];
